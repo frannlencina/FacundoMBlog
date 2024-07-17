@@ -11,3 +11,35 @@
   --grey: #707070;
   --ligh-grey: #F3F3F3;
 }
+
+.footer_links{
+  border: 1px solid;
+  border-radius: 999px;
+  border-color: var(--light-blue);
+  padding: 0.5rem 1rem;
+  position: relative;
+}
+
+.footer_links:hover{
+  background-color: var(--light-blue);
+  color: white;
+}
+
+.footer_glob_links{
+  position: relative;
+  top: 0.75rem;
+  left: 5rem;
+  font-size: 0.75rem; 
+  padding: 0.375rem 0.5rem; 
+  display: inline-block; 
+  border-radius: 9999px;
+  background-color: var(--light-blue);
+  color: white;
+  border: 1px solid transparent;
+}
+
+.footer_glob_links:hover{
+  border: 1px solid var(--light-blue);
+  color: var(--light-blue); 
+  background-color: white;
+}
