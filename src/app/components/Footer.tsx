@@ -7,7 +7,7 @@ export default function Footer() {
         });
     }
     return (
-        <footer className="flex flex-col gap-8 text-[--light-blue] max-w-2xl mx-auto py-24">
+        <footer className="flex flex-col gap-8 text-[--light-blue] max-w-2xl mx-auto py-24 mt-24">
             <div className="flex justify-between">
                 <span className="text-[--dark-blue] select-none opacity-50">© 2024</span>
                 <button className="relative group" onClick={jumpToTop}>
@@ -32,7 +32,7 @@ export default function Footer() {
                     </li>
                 </ul>
             </div>
-            <span className="mx-auto mt-12 opacity-40">Desarollador con <i className="ri-heart-3-fill"></i> por <a className="text-[--dark-blue] hover:text-[--deep-blue]" href="https://www.instagram.com/fraint.studio/" target="_blank">@FraintStudio</a></span>
+            <span className="mx-auto mt-12 opacity-40">Desarrollado con <i className="ri-heart-3-fill"></i> por <a className="text-[--dark-blue] hover:text-[--deep-blue]" href="https://fraint-studio.deno.dev" target="_blank">@FraintStudio</a></span>
         </footer>
     )
 }

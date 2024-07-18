@@ -10,12 +10,18 @@
   --deep-blue: #13212E;
   --grey: #707070;
   --ligh-grey: #F3F3F3;
+
+    /* Swiper Custom Variables */
+    /* Size change in the component props */
+    --swiper-navigation-color: var(--light-blue);
+    --swiper-pagination-color: var(--mid-blue);
 }
 
 .footer_links{
   border: 1px solid;
   border-radius: 999px;
   border-color: var(--light-blue);
+  color: var(--light-blue);
   padding: 0.5rem 1rem;
   position: relative;
 }
@@ -25,21 +31,17 @@
   color: white;
 }
 
-.footer_glob_links{
-  position: relative;
-  top: 0.75rem;
-  left: 5rem;
-  font-size: 0.75rem; 
-  padding: 0.375rem 0.5rem; 
-  display: inline-block; 
-  border-radius: 9999px;
-  background-color: var(--light-blue);
-  color: white;
-  border: 1px solid transparent;
+header{
+  min-width: 42rem ;
+  background-position: center;
+  background-size: contain;
+  background-repeat: round;
+  background-image: url("/assets/imgs/hero/header-bg.png");
 }
 
-.footer_glob_links:hover{
-  border: 1px solid var(--light-blue);
-  color: var(--light-blue); 
-  background-color: white;
+.swiper-button-prev, .swiper-button-next{
+  border: 1px solid;
+  border-radius: 999px;
+  border-color: var(--light-blue);
+  padding: 1rem;
 }
