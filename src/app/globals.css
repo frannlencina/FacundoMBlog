@@ -12,7 +12,7 @@
   --ligh-grey: #F3F3F3;
 
     /* Swiper Custom Variables */
-    /* Size change in the component props */
+    --swiper-navigation-size: 0.7rem !important;
     --swiper-navigation-color: var(--light-blue);
     --swiper-pagination-color: var(--mid-blue);
 }

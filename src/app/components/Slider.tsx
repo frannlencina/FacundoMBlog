@@ -10,7 +10,6 @@ import 'swiper/css/pagination';
 export default function Slider() {
     return (
         <Swiper
-            style={{'--swiper-navigation-size': '0.7rem'}}
             // install Swiper modules
             modules={[Navigation, Pagination, Scrollbar, A11y]}
             spaceBetween={50}
