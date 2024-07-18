@@ -1,7 +1,7 @@
 'use client'
 export default function Navbar(){
     return (
-        <nav className="flex items-center justify-between  text-[--deep-blue] pt-8 max-w-2xl mx-auto">
+        <nav className="flex items-center justify-between text-[--light-blue] px-6 py-4 mt-5 max-w-2xl mx-auto bg-white rounded-2xl">
             <a className="" href="/">Casa</a>
             <ul className="flex items-center gap-12 ">
                 <li>

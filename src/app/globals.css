@@ -32,11 +32,11 @@
 }
 
 header{
-  min-width: 42rem ;
+  /* min-width: 42rem ;
   background-position: center;
   background-size: contain;
   background-repeat: round;
-  background-image: url("/assets/imgs/hero/header-bg.png");
+  background-image: url("/assets/imgs/hero/header-bg.png"); */
 }
 
 .swiper-button-prev, .swiper-button-next{

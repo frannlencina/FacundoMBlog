@@ -31,12 +31,12 @@ export default function Home() {
   return (
     <main className="flex flex-col gap-12 items-center min-h-screen p-4 w-full">
       <header className="max-w-4xl min-h-48 rounded-5xl text-center p-4">
-        <h1 className="text-white text-6xl font-black">FACUNDO MEDEROS</h1>
-        <h2 className="text-white mt-4 max-w-md mx-auto">“ Viajar por el mundo es mi pasión, es lo que amo y mas me gusta, es mi estilo de vida “</h2>
+        <h1 className="text-[--light-blue] text-6xl font-black">FACUNDO MEDEROS</h1>
+        <h2 className="text-[--light-blue] mt-4 max-w-md mx-auto">“ Viajar por el mundo es mi pasión, es lo que amo y mas me gusta, es mi estilo de vida “</h2>
       </header>
-      <section className="w-full">
+      <div className="w-full max-w-2xl sticky top-0 z-30">
         <Navbar />
-      </section>
+      </div>
       <section className="mt-52 mb-24">
         <div className="text-[--mid-blue] flex justify-start flex-col">
           <h4 className="font-black text-5xl">sobre mi</h4>
