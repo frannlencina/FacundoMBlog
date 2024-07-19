@@ -5,25 +5,26 @@ import { useState, useEffect } from "react"
 import PostCard from "../../components/PostCard"
 import { getPetition } from "@/lib/getPetition"
 import TravelData from "@/lib/interfaces"
+import Badge from "@/components/Badge"
 
 export default function Blog() {
 
     const [posts, setPosts] = useState<TravelData[]>([]);
-    
+
     useEffect(() => {
         getPetition({ collection: "blogs" })
-          .then((data) => {
-            if (Array.isArray(data)) {
-              setPosts(data);
-            } else {
-              setPosts([]);
-            }
-          })
-          .catch((error) => {
-            console.error("Error fetching travel data:", error);
-            setPosts([]);
-          });
-      }, []);
+            .then((data) => {
+                if (Array.isArray(data)) {
+                    setPosts(data);
+                } else {
+                    setPosts([]);
+                }
+            })
+            .catch((error) => {
+                console.error("Error fetching travel data:", error);
+                setPosts([]);
+            });
+    }, []);
 
 
     return (
@@ -32,7 +33,7 @@ export default function Blog() {
                 <Navbar />
             </div>
             <div className="max-w-lg mx-auto text-center pt-12 px-4">
-                <span className="inline-block border border-[--light-blue] select-none bg-white text-[--mid-blue] text-sm px-2 py-0.5 rounded-lg my-6">Posts</span>
+                <Badge text="Posts" />
                 <h1 className="text-5xl font-black text-[--mid-blue]">Publicaciones sobre mis viajes </h1>
                 <h4 className="text-[--grey] mt-4">Lorem Ipsum is simply dummy text of the printing and  typesetting industry. Lorem </h4>
             </div>
@@ -56,7 +57,7 @@ export default function Blog() {
                         />
                         <hr className="mx-auto my-16 max-w-[70%]" />
                     </div>
-                    
+
                 ))}
             </section>
         </section>

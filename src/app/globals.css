@@ -29,14 +29,17 @@
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
 
+    /* Text color and some variables */
+    
     --extra-light-blue: #6aa3d859;
     --light-blue: #6AA3D8;
     --mid-blue: #235686;
     --dark-blue: #194369;
     --deep-blue: #13212E;
     --grey: #707070;
-    --ligh-grey: #F3F3F3;
-  
+    --light-grey: #F3F3F3;
+    --green: #7ABF6D;
+
       /* Swiper Custom Variables */
       --swiper-navigation-size: 0.7rem !important;
       --swiper-navigation-color: var(--light-blue);
@@ -101,4 +104,14 @@
   border-radius: 999px;
   border-color: var(--light-blue);
   padding: 1rem;
+}
+
+#donationCard{
+  background-color: #EEEFF0;
+  background-image: url('../../public/assets/imgs/donaciones/donaciones-card-bg.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 30px 0px;
+  border-radius: 30px;
 }
