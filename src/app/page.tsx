@@ -1,32 +1,55 @@
+'use client'
 import Navbar from "./components/Navbar";
 import Slider from "./components/Slider";
-
 import TravelsCards from "./components/TravelsCard";
+import { useEffect, useState } from "react";
+import Link from "next/link";
+
+interface BannerData {
+  data: {
+    attributes: {
+      url: string;
+    }
+  }
+}
+
+interface Attributes {
+  title: string;
+  description: string;
+  publishedAt: string;
+  slug: string;
+  banner: BannerData;
+}
+
+interface TravelData {
+  id: number;
+  attributes: Attributes;
+}
+
 export default function Home() {
 
-  const travels = [
-    {
-      id: 1,
-      title: "Travel 1",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, libero",
-      date: "2023",
-      slug: "travel-1"
-    },
-    {
-      id: 2,
-      title: "Travel 2",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, libero",
-      date: "2023",
-      slug: "travel-2"
-    },
-    {
-      id: 3,
-      title: "Travel 3",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, libero",
-      date: "2023",
-      slug: "travel-3"
-    }
-  ]
+  const [travelData, setTravelData] = useState<TravelData[]>([]);
+  
+  useEffect(() => {
+    fetch("http://localhost:1337/api/blogs?populate=*")
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data.data)
+        if (Array.isArray(data)) {
+          setTravelData(data);
+        } else if (data && data.data) {
+          setTravelData(data.data);
+        } else {
+          setTravelData([]);
+        }
+      })
+      .catch((error) => {
+        console.error("Error fetching travel data:", error);
+        setTravelData([]);
+      });
+  }, []);
+
+  const filteredData = travelData.slice(0, 3);
 
   return (
     <main className="flex flex-col gap-12 items-center min-h-screen p-4 w-full">
@@ -43,24 +66,31 @@ export default function Home() {
           <p className="max-w-sm mt-2 opacity-50">Viajar por el mundo es mi pasión, es lo que amo y mas me gusta, es mi estilo de vida</p>
         </div>
         <div className="max-w-3xl mx-auto my-24">
-         <Slider />
+          <Slider />
         </div>
       </section>
-      <section>
-        <div className="text-[--mid-blue] flex justify-start flex-col">
+      <section className="py-32">
+        <div className="text-[--mid-blue] flex justify-start flex-col pb-32">
           <h4 className="font-black text-5xl">viajes</h4>
           <p className="max-w-sm mt-2 opacity-50">Viajar por el mundo es mi pasión, es lo que amo y mas me gusta, es mi estilo de vida</p>
         </div>
-        <div className="my-32">
-          {
-            travels.map((item) => (
-              <div>
-                <TravelsCards title={item.title} desc={item.desc} date={item.date} slug={item.slug} />
-                <hr className="my-6" />
-              </div>
-            ))
-          }
-          {/* Algunos recorridos de viajes hechos */}
+        <div className="">
+          {filteredData.map((item) => (
+            <div key={item.id}>
+              <TravelsCards
+                banner={item.attributes.banner.data.attributes.url}
+                title={item.attributes.title}
+                desc={item.attributes.description}
+                publishedAt={item.attributes.publishedAt}
+                slug={item.id}
+              />
+              <hr className="my-6" />
+            </div>
+          ))}
+          
+        </div>
+        <div className="flex justify-center mt-12">
+        <Link href="/blog" className="footer_links w-fit mx-auto">Ver todos</Link>
         </div>
       </section>
       <section className="flex flex-col gap-10 max-w-4xl mx-auto py-24">
@@ -77,18 +107,18 @@ export default function Home() {
             <img className="max-w-52" src="https://res.cloudinary.com/dctldwa03/image/upload/v1721187840/gallery-card-img-2_c5jc4u.png" alt="" />
             <img className="max-w-52" src="https://res.cloudinary.com/dctldwa03/image/upload/v1721187840/gallery-card-img-3_znrks2.png" alt="" />
           </div>
-          <button className="footer_links w-fit mx-auto">Ver todo</button>
+          <Link href="/galeria" className="footer_links w-fit mx-auto">Ver galeria</Link>
         </div>
       </section>
       <section>
         <div className="text-[--mid-blue] text-center">
           <h4 className="font-black text-5xl">contactarme</h4>
           <p className="max-w-xs mt-2 mx-auto opacity-50">si quieres contactarme puedes contactarme aquí</p>
-        <div className="text-[--mid-blue] text-xl flex items-center gap-4 justify-center mt-6">
-          <a className="text-[--light-blue] hover:opacity-50" href=""><i className="ri-instagram-line"></i></a>
-          <a className="text-[--light-blue] hover:opacity-50" href=""><i className="ri-youtube-line"></i></a>
-          <a className="text-[--light-blue] hover:opacity-50" href=""><i className="ri-twitter-x-line"></i></a>
-        </div>
+          <div className="text-[--mid-blue] text-xl flex items-center gap-4 justify-center mt-6">
+            <Link className="text-[--light-blue] hover:opacity-50" href=""><i className="ri-instagram-line"></i></Link>
+            <Link className="text-[--light-blue] hover:opacity-50" href=""><i className="ri-youtube-line"></i></Link>
+            <Link className="text-[--light-blue] hover:opacity-50" href=""><i className="ri-twitter-x-line"></i></Link>
+          </div>
         </div>
       </section>
     </main>

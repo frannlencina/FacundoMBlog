@@ -1,4 +1,5 @@
 'use client'
+import Link from "next/link";
 export default function Footer() {
     const jumpToTop = () => {
         window.scrollTo({
@@ -22,17 +23,17 @@ export default function Footer() {
             <div>
                 <ul className="flex gap-8">
                     <li>
-                        <a className="footer_links" href="#">Instagram</a>
+                        <Link className="footer_links" href="#">Instagram</Link>
                     </li>
                     <li>
-                        <a className="footer_links" href="#">Youtube</a>
+                        <Link className="footer_links" href="#">Youtube</Link>
                     </li>
                     <li>
-                        <a className="footer_links" href="#">Twitter</a>
+                        <Link className="footer_links" href="#">Twitter</Link>
                     </li>
                 </ul>
             </div>
-            <span className="mx-auto mt-12 opacity-40">Desarrollado con <i className="ri-heart-3-fill"></i> por <a className="text-[--dark-blue] hover:text-[--deep-blue]" href="https://fraint-studio.deno.dev" target="_blank">@FraintStudio</a></span>
+            <span className="mx-auto mt-12 opacity-40">Desarrollado con <i className="ri-heart-3-fill"></i> por <Link className="text-[--dark-blue] hover:text-[--deep-blue]" href="https://fraint-studio.deno.dev" target="_blank">@FraintStudio</Link></span>
         </footer>
     )
 }
