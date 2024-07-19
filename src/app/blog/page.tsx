@@ -3,54 +3,32 @@ import Navbar from "../../components/Navbar"
 import Breadcrumb from "../../components/Breadcrumb"
 import { useState, useEffect } from "react"
 import PostCard from "../../components/PostCard"
-
-interface BannerData {
-    data: {
-        attributes: {
-            url: string;
-        }
-    }
-}
-
-interface Attributes {
-    title: string;
-    description: string;
-    publishedAt: string;
-    slug: string;
-    banner: BannerData;
-}
-
-interface TravelData {
-    id: number;
-    attributes: Attributes;
-}
+import { getPetition } from "@/lib/getPetition"
+import TravelData from "@/lib/interfaces"
 
 export default function Blog() {
 
-    useEffect(() => {
-        fetch("http://localhost:1337/api/blogs?populate=*")
-            .then((response) => response.json())
-            .then((data) => {
-                console.log(data.data)
-                if (Array.isArray(data)) {
-                    setPosts(data);
-                } else if (data && data.data) {
-                    setPosts(data.data);
-                } else {
-                    setPosts([]);
-                }
-            })
-            .catch((error) => {
-                console.error("Error fetching travel data:", error);
-                setPosts([]);
-            });
-    }, []);
-
-
     const [posts, setPosts] = useState<TravelData[]>([]);
+    
+    useEffect(() => {
+        getPetition({ collection: "blogs" })
+          .then((data) => {
+            if (Array.isArray(data)) {
+              setPosts(data);
+            } else {
+              setPosts([]);
+            }
+          })
+          .catch((error) => {
+            console.error("Error fetching travel data:", error);
+            setPosts([]);
+          });
+      }, []);
+
+
     return (
         <section className="mx-auto max-w-4xl min-h-screen">
-            <div>
+            <div className="w-full max-w-2xl sticky top-4 z-30 mx-auto">
                 <Navbar />
             </div>
             <div className="max-w-lg mx-auto text-center pt-12 px-4">
