@@ -6,16 +6,16 @@ export default function Navbar(){
             <Link className="" href="/">Casa</Link>
             <ul className="flex items-center gap-12 ">
                 <li>
-                    <Link className="hover:text-[--mid-blue]" href="/viajes">Viajes</Link>
+                    <Link className="hover:text-[--mid-blue]" href="/viajes">Blog</Link>
                 </li>
                 <li>
-                    <Link className="hover:text-[--mid-blue]" href="/recorrido">Recorrido</Link>
+                    <Link className="hover:text-[--mid-blue]" href="/recorrido">Galeria</Link>
                 </li>
                 <li>
                     <Link className="hover:text-[--mid-blue]"href="/sobre-mi">Sobre Mi</Link>
                 </li>
             </ul>
-           <Link className=" text-white px-6 py-1.5 bg-[--deep-blue] hover:bg-[--dark-blue] rounded-lg" href="/donaciones">Ayudar</Link>
+           <Link className=" text-white px-6 py-1.5 bg-[--deep-blue] hover:bg-[--dark-blue] rounded-lg" href="/donaciones">Donaciones</Link>
         </nav>
     )
 }
