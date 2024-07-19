@@ -6,10 +6,10 @@ export default function Navbar(){
             <Link className="" href="/">Casa</Link>
             <ul className="flex items-center gap-12 ">
                 <li>
-                    <Link className="hover:text-[--mid-blue]" href="/viajes">Blog</Link>
+                    <Link className="hover:text-[--mid-blue]" href="/blog">Blog</Link>
                 </li>
                 <li>
-                    <Link className="hover:text-[--mid-blue]" href="/recorrido">Galeria</Link>
+                    <Link className="hover:text-[--mid-blue]" href="/galeria">Galeria</Link>
                 </li>
                 <li>
                     <Link className="hover:text-[--mid-blue]"href="/sobre-mi">Sobre Mi</Link>
