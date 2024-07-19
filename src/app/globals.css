@@ -87,6 +87,8 @@
   color: var(--light-blue);
   padding: 0.5rem 1rem;
   position: relative;
+  display: flex;
+  text-wrap: stable;
 }
 
 .footer_links:hover{

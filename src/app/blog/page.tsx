@@ -66,7 +66,7 @@ export default function Blog() {
                     listClasses='hover:underline mx-2 '
                     capitalizeLinks />
             </div>
-            <section className="flex flex-col gap-8 py-32">
+            <section className="grid grid-cols-2 sm:flex sm:flex-col sm:gap-8 py-32">
                 {posts.map((item) => (
                     <div key={item.id}>
                         <PostCard
@@ -76,7 +76,9 @@ export default function Blog() {
                             publishedAt={item.attributes.publishedAt}
                             slug={item.id}
                         />
+                        <hr className="mx-auto my-16 max-w-[70%]" />
                     </div>
+                    
                 ))}
             </section>
         </section>

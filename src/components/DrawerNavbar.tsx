@@ -13,17 +13,14 @@ import {
 } from "@/components/ui/drawer"
 
 export default function DrawerNavbar() {
-    const [goal, setGoal] = React.useState(350)
-
-    function onClick(adjustment: number) {
-        setGoal(Math.max(200, Math.min(400, goal + adjustment)))
-    }
     return (
         <Drawer>
             <DrawerTrigger asChild className="sm:hidden">
                 <Button><i className="ri-menu-line"></i></Button>
             </DrawerTrigger>
             <DrawerContent>
+                <DrawerTitle> { /* Even though there is no Title, the component must be there due to its respective dependency */} </DrawerTitle>
+                <DrawerDescription>{ /* Even though there is no Description, the component has to be there due to its respective dependency */} </DrawerDescription>
                 <div className="mx-auto w-full max-w-sm">
                     <div className="text-center text-2xl font-bold text-[--light-blue] my-8">
                         <ul className="flex flex-col gap-5">
