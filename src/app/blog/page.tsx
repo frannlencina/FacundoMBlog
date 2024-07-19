@@ -1,8 +1,8 @@
 'use client'
-import Navbar from "../components/Navbar"
-import Breadcrumb from "../components/Breadcrumb"
+import Navbar from "../../components/Navbar"
+import Breadcrumb from "../../components/Breadcrumb"
 import { useState, useEffect } from "react"
-import PostCard from "../components/PostCard"
+import PostCard from "../../components/PostCard"
 
 interface BannerData {
     data: {

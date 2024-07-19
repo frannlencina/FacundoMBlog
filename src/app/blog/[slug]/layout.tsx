@@ -1,4 +1,4 @@
-import Navbar from "@/app/components/Navbar"
+import Navbar from "@/components/Navbar"
 import '../postStyles.css'
 export default function PostLayout({
     children,

@@ -1,6 +1,6 @@
 import ReactMarkdown from 'react-markdown';
 import moment from 'moment';
-import Breadcrumb from '@/app/components/Breadcrumb';
+import Breadcrumb from '@/components/Breadcrumb';
 
 let find = false;
 async function getPost(slug: string) {
