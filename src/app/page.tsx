@@ -112,7 +112,7 @@ export default function Home() {
         </div>
       </section>
       <section>
-        <div className="text-[--mid-blue] text-start">
+        <div className="text-[--mid-blue] text-center">
           <h4 className="font-black text-4xl text-wrap">contactarme</h4>
           <p className="max-w-xs mt-2 mx-auto opacity-50 text-wrap">si quieres contactarme puedes contactarme aquí</p>
           <div className="text-[--mid-blue] text-xl flex items-center gap-4 justify-center mt-6">
