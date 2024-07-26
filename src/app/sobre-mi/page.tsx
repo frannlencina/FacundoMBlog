@@ -38,7 +38,7 @@ export default function Page() {
                     </h2>
                     <div className="flex gap-3 gap-y-6 text-sm my-6">
                         <Link className="bg-[--deep-blue] text-white px-4 py-2 rounded-xl" href="">Contactame</Link>
-                        <Link className="border border-[--deep-blue] text-[--deep-blue] bg-white px-4 py-2 rounded-xl" href="">Descarga CV</Link>
+                        <Link className="border border-[--deep-blue] text-[--deep-blue] bg-white px-4 py-2 rounded-xl" target="_blank" href="/cv-test.pdf">Descarga CV</Link>
                     </div>
                     <hr className="mt-16" />
                     <div className="flex flex-col gap-y-10 py-16">
