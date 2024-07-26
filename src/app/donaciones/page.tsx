@@ -2,7 +2,7 @@
 import Navbar from "@/components/Navbar"
 import DonationCard from "@/components/DonationsCard"
 import Badge from "@/components/Badge"
-
+ 
 import {
     Accordion,
     AccordionContent,
