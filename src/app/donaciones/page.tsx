@@ -14,14 +14,14 @@ import FQ from '@/lib/fq.json'
 export default function Page() {
     return (
         <section>
-            <div className="max-w-2xl mx-auto w-full sticky top-4 z-30">
+            <div className="max-w-2xl mx-auto w-full sticky top-4 z-30 px-4">
                 <Navbar />
             </div>
             <div id="donationCard" className="mt-16 max-w-xl mx-auto">
                 <DonationCard />
             </div>
             <hr className="my-6 max-w-2xl mx-auto" />
-            <section className="max-w-2xl mx-auto m-32">
+            <section className="max-w-2xl mx-auto m-32 px-4">
                 <Badge text="Me ayudas y te ayudo" />
                 <div className="text-center max-w-lg mx-auto">
                     <h1 className="text-4xl font-black mb-3">En el mochitour no estoy solo, tambien estan ustedes</h1>
@@ -36,7 +36,7 @@ export default function Page() {
             </section>
             <hr className="my-6 max-w-2xl mx-auto" />
             <section className="bg-[--light-grey]">
-                <div className="max-w-2xl mx-auto py-32">
+                <div className="max-w-2xl mx-auto py-32 px-4">
                     <h3 className="text-2xl text-[--mid-blue] font-bold">Preguntas frecuentes</h3>
                     <div className="flex flex-col gap-3 my-6">
                         {
