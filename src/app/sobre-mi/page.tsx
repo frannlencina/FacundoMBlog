@@ -1,8 +1,8 @@
-import Link from "next/link"
-import ExpCard from "@/components/sobre-mi/ExpCard"
-import StudiesCard from "@/components/sobre-mi/StudiesCard"
-import VolunCard from "@/components/sobre-mi/VolunCard"
 import Navbar from "@/components/Navbar"
+import Link from "next/link"
+import StudiesCard from "@/components/sobre-mi/StudiesCard"
+import ExpCard from "@/components/sobre-mi/ExpCard"
+import VolunCard from "@/components/sobre-mi/VolunCard"
 
 export default function Page() {
     return (
