@@ -6,9 +6,9 @@ export default function Page() {
             <section className="container py-24">
                 <div className="text-center py-6 max-w-fit mx-auto mb-52">
                     <h1 className="text-[--mid-blue] font-black text-4xl sm:text-5xl">MOCHITOURS</h1>
-                    <img className=" max-w-52 sm:max-w-72 float-right" src="/assets/imgs/sobre-mi/mochitour-img.png" alt="" />
+                    <img className="max-w-52 sm:max-w-72 float-right" src="/assets/imgs/sobre-mi/mochitour-img.png" alt="" />
                 </div>
-                <div className="flex gap-6 w-full">
+                <div className="flex flex-col sm:flex-row gap-6 justify-center items-center w-full p-4">
                     <img className="max-w-80" src="/assets/imgs/sobre-mi/descubrime-img.png" alt="" />
                     <div>
                         <h2 className="subtitle mb-2">Descubrime</h2>
@@ -16,7 +16,7 @@ export default function Page() {
                     </div>
                 </div>
             </section>
-            <section className="container flex flex-col gap-y-12 py-24">
+            <section className="container flex flex-col gap-y-12 py-24 p-4">
                 <div>
                     <h4 className="subtitle">¿Precisas voluntarios?</h4>
                     <p className="grey-p">Si tienes un hotel, hostal o posada, camping, eco aldea, espacio o comunidad / proyecto donde crees que podría trabajar o ser tu voluntario, ofreciéndote alguno de mis servicios, ponte en contacto sin dudarlo. PUEDO SER TU PROXIMO VOLUNTARIO</p>
