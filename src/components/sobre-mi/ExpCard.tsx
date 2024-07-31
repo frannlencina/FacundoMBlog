@@ -6,7 +6,7 @@ interface Props {
 
 export default function ExpCard({title, description, image}:Props) {
     return (
-        <div className="flex flex-row gap-3 items-center border border-[--light-grey] px-4 py-2 rounded-full cursor-default">
+        <div className="flex flex-row gap-3 items-center border border-[--light-grey] px-4 py-2 rounded-full cursor-default max-w-sm ">
             <div className="size-12 rounded-full bg-[--grey]">
                 <img src={image} alt="" />
             </div>

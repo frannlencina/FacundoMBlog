@@ -6,7 +6,7 @@ interface Props {
 }
 export default function VolunCard({ title, description, date, image}: Props) {
     return (
-        <div className="flex flex-row gap-3 items-center border border-[--light-grey] px-4 py-2 rounded-2xl cursor-default">
+        <div className="flex flex-row gap-3 items-center border border-[--light-grey] px-4 py-2 rounded-2xl cursor-default max-w-sm">
             <div className="size-12">
             <img className=" object-cover rounded-xl bg-[--grey]" src="https://res.cloudinary.com/danwrsjzh/image/upload/v1721342000/Captura_de_pantalla_2024_07_11_175742_be7534e632.png" alt="" />
             </div>
