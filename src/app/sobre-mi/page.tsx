@@ -10,7 +10,6 @@ import ServicesData from "@/lib/ServicesData.json"
 export default function Page() {
     return (
         <main>
-            <Navbar />
             <section id="profesionalSection" className="container p-4">
                 <div className="text-center py-24 mx-auto">
                     <h1 className="text-5xl font-black">Sobre mi</h1>

@@ -1,6 +1,5 @@
 'use client'
 import Image from "next/image"
-import Navbar from "@/components/Navbar"
 import { useState, useEffect } from "react"
 import { getPetition } from "@/lib/getPetition"
 import TravelData from "@/lib/interfaces"
@@ -28,9 +27,6 @@ export default function Page() {
 
     return (
         <section className="max-w-4xl mx-auto">
-            <div className="w-full max-w-2xl sticky top-4 z-30 mx-auto">
-                <Navbar />
-            </div>
             <div className="columns-2 sm:columns-3 justify-center py-32 p-4">
                 {posts.map((item, index) => (
                     <>

@@ -2,7 +2,6 @@ import Navbar from "@/components/Navbar"
 export default function Page() {
     return (
         <main>
-            <Navbar />
             <section className="container py-24">
                 <div className="text-center py-6 max-w-fit mx-auto mb-52">
                     <h1 className="text-[--mid-blue] font-black text-4xl sm:text-5xl">MOCHITOURS</h1>

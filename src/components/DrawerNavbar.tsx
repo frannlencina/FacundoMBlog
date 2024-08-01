@@ -25,13 +25,16 @@ export default function DrawerNavbar() {
                     <div className="text-center text-2xl font-bold text-[--light-blue] my-8">
                         <ul className="flex flex-col gap-5">
                             <li>
+                                <Link className="hover:text-[--mid-blue]" href="/sobre-mi">Sobre Mi</Link>
+                            </li>
+                            <li>
+                                <Link className="hover:text-[--mid-blue]" href="/mochitour">Mochitour</Link>
+                            </li>
+                            <li>
                                 <Link className="hover:text-[--mid-blue]" href="/blog">Blog</Link>
                             </li>
                             <li>
                                 <Link className="hover:text-[--mid-blue]" href="/galeria">Galeria</Link>
-                            </li>
-                            <li>
-                                <Link className="hover:text-[--mid-blue]" href="/sobre-mi">Sobre Mi</Link>
                             </li>
                             <li>
                                 <Link className="hover:text-[--mid-blue]" href="/donaciones">Donaciones</Link>

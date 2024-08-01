@@ -29,9 +29,6 @@ export default function Blog() {
 
     return (
         <section className="mx-auto max-w-4xl min-h-screen">
-            <div className="w-full max-w-2xl sticky top-4 z-30 mx-auto">
-                <Navbar />
-            </div>
             <div className="max-w-lg mx-auto text-center pt-12 px-4">
                 <Badge text="Posts" />
                 <h1 className="text-5xl font-black text-[--mid-blue]">Publicaciones sobre mis viajes </h1>
