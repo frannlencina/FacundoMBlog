@@ -14,9 +14,6 @@ import FQ from '@/lib/fq.json'
 export default function Page() {
     return (
         <section>
-            <div className="max-w-2xl mx-auto w-full sticky top-4 z-30 px-4">
-                <Navbar />
-            </div>
             <div id="donationCard" className="mt-16 max-w-xl mx-auto">
                 <DonationCard />
             </div>

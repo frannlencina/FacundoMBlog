@@ -53,11 +53,11 @@ export default function Home() {
 
   return (
     <main className="flex flex-col gap-12 items-center min-h-screen p-4 w-full">
-      <div className="max-w-4xl min-h-48 rounded-5xl text-center">
+      <div className="max-w-4xl min-h-48 my-32 rounded-5xl text-center">
         <h1 className="text-[--mid-blue] text-4xl sm:text-6xl font-black">FACUNDO MEDEROS</h1>
         <h2 className="text-[--light-blue] mt-4 max-w-md mx-auto">“ Viajar por el mundo es mi pasión, es lo que amo y mas me gusta, es mi estilo de vida “</h2>
       </div>
-      <section className="mt-52 mb-24 w-full sm:max-w-2xl">
+      <section className="mb-24 w-full sm:max-w-2xl">
         <div className="text-[--mid-blue] flex justify-start flex-col">
           <h4 className="font-black text-5xl">sobre mi</h4>
           <p className="max-w-sm mt-2 opacity-50">Viajar por el mundo es mi pasión, es lo que amo y mas me gusta, es mi estilo de vida</p>
@@ -66,13 +66,12 @@ export default function Home() {
         <Slider />
       </div>
       </section>
-     
       <section className="py-32">
         <div className="text-[--mid-blue] flex justify-start flex-col pb-32">
           <h4 className="font-black text-5xl">viajes</h4>
           <p className="max-w-sm mt-2 opacity-50">Viajar por el mundo es mi pasión, es lo que amo y mas me gusta, es mi estilo de vida</p>
         </div>
-        <div>
+        <div className="flex flex-col gap-y-6">
           {filteredData.map((item) => (
             <div key={item.id}>
               <TravelsCards
@@ -82,7 +81,6 @@ export default function Home() {
                 publishedAt={item.attributes.publishedAt}
                 slug={item.id}
               />
-              <hr className="my-16 sm:my-6" />
             </div>
           ))}
 
