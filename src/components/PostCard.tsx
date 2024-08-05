@@ -5,25 +5,31 @@ import moment from 'moment';
 interface Props {
     slug: number,
     title: string,
-    desc: string,
+    desc: String,
     banner: string,
     publishedAt: string,
 }
 export default function PostCard({ slug, title, desc, banner, publishedAt }: Props) {
     const formattedDate = moment(publishedAt).format('DD/MM/YYYY');
     return (
-        <div className="flex flex-col justify-start sm:flex-row  max-w-3xl items-start sm:items-center sm:justify-between gap-y-6 sm:gap-4 px-4">
-            <div className='max-w-44 flex flex-col justify-start items-start'>
-                <span className="relative top-8 w-fit left-4 text-xs bg-white px-2 py-0.5 rounded-lg text-[--light-blue] max-w-32 select-none">{formattedDate}</span>
-                <img className=' object-cover rounded-3xl' src={banner} alt="" />
-            </div>
-            <div className="flex flex-col gap-3 min-[790px]:max-w-[50%] min-[640px]:max-w-[35%]">
-                <span className="text-[--mid-blue] text-lg  font-bold">{title}</span>
-                <span className="text-[--grey] text-start">{desc}</span>
-            </div>
-            <div>
-                <Link className="footer_links flex-wrap" href={`/blog/${slug}`}>ver mi recorrido</Link>
-            </div>
-        </div>
+        <>
+            <article className="flex flex-col min-[705px]:flex-row items-start min-[705px]:items-center justify-between w-fit mx-auto p-6">
+                <div className='flex flex-col min-[705px]:flex-row min-[705px]:gap-5 items-start min-[705px]:items-center'>
+                    <div>
+                        <span className="relative text-xs text-gray-400 bg-stone-100 rounded-full px-1 py-0.5 top-7 -right-2 select-none">{formattedDate}</span>
+                        <img className="size-32 min-[705px]:size-44 object-cover object-center rounded-xl" src={banner} alt="" />
+                    </div>
+                    <div className="max-w-xs py-6 min-[705px]:p-6 mx-auto">
+                        <h4 className="text-[--mid-blue] text-2xl font-bold mb-3">{title}</h4>
+                        <p className="grey-p text-wrap truncate line-clamp-3">{desc}</p>
+                    </div>
+                </div>
+                <div className="inline-flex">
+                    <Link className="footer_links" href={`/blog/${slug}`}>
+                        Ver mi recorrido
+                    </Link>
+                </div>
+            </article>
+        </>
     )
 }

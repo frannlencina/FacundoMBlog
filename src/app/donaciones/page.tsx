@@ -2,7 +2,7 @@
 import Navbar from "@/components/Navbar"
 import DonationCard from "@/components/DonationsCard"
 import Badge from "@/components/Badge"
- 
+
 import {
     Accordion,
     AccordionContent,
@@ -10,6 +10,7 @@ import {
     AccordionTrigger,
 } from "@/components/ui/accordion"
 import FQ from '@/lib/fq.json'
+import ShopCard from "@/components/tienda/ShopCard"
 
 export default function Page() {
     return (
@@ -26,8 +27,14 @@ export default function Page() {
                 </div>
                 <div className="mt-24">
                     <h3 className="text-2xl text-[--mid-blue] font-bold">Productos</h3>
-                    <div>
-                        {/* Cards de los Productos */}
+                    <div className="grid max-[300px]:grid-cols-1 grid-cols-2 sm:grid-cols-3 gap-y-12 gap-x-5 my-32">
+                        <ShopCard name="Campera Puffer" brand="North Face" price={160} slug="1" />
+                        <ShopCard name="Campera Puffer" brand="North Face" price={160} slug="2" />
+                        <ShopCard name="Campera Puffer" brand="North Face" price={160} slug="3" />
+                        <ShopCard name="Campera Puffer" brand="North Face" price={160} slug="4" />
+                        <ShopCard name="Campera Puffer" brand="North Face" price={160} slug="5" />
+                        <ShopCard name="Campera Puffer" brand="North Face" price={160} slug="6" />
+
                     </div>
                 </div>
             </section>

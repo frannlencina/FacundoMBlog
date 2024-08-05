@@ -1,5 +1,4 @@
 'use client'
-import Navbar from "../../components/Navbar"
 import Breadcrumb from "../../components/Breadcrumb"
 import { useState, useEffect } from "react"
 import PostCard from "../../components/PostCard"
@@ -28,10 +27,10 @@ export default function Blog() {
 
 
     return (
-        <section className="mx-auto max-w-4xl min-h-screen">
+        <section className="mx-auto max-w-4xl ">
             <div className="max-w-lg mx-auto text-center pt-12 px-4">
                 <Badge text="Posts" />
-                <h1 className="text-5xl font-black text-[--mid-blue]">Publicaciones sobre mis viajes </h1>
+                <h1 className="text-3xl sm:text-5xl font-black text-[--mid-blue]">Publicaciones sobre mis viajes </h1>
                 <h4 className="text-[--grey] mt-4">Lorem Ipsum is simply dummy text of the printing and  typesetting industry. Lorem </h4>
             </div>
             <div className="flex justify-center my-12">
@@ -42,9 +41,8 @@ export default function Blog() {
                     listClasses='hover:underline mx-2 '
                     capitalizeLinks />
             </div>
-            <section className="grid grid-cols-2 sm:flex sm:flex-col sm:gap-8 py-32">
+            <section className="flex flex-col gap-y-12 max-[705px]:divide-y-2 rounded-none">
                 {posts.map((item) => (
-                    <div key={item.id}>
                         <PostCard
                             banner={item.attributes.banner.data.attributes.url}
                             title={item.attributes.title}
@@ -52,9 +50,6 @@ export default function Blog() {
                             publishedAt={item.attributes.publishedAt}
                             slug={item.id}
                         />
-                        <hr className="mx-auto my-16 max-w-[70%]" />
-                    </div>
-
                 ))}
             </section>
         </section>
